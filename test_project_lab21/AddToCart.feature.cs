@@ -20,15 +20,14 @@ namespace test_project_lab21
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class AddToCartFunctionalityFeature
+    public partial class AddItemToCartManuallyFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-        private static string[] featureTags = new string[] {
-                "web"};
+        private static string[] featureTags = ((string[])(null));
         
 #line 1 "AddToCart.feature"
 #line hidden
@@ -49,8 +48,7 @@ namespace test_project_lab21
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "Add to Cart Functionality", "  As a standard user\r\n  I want to be able to add a product to the cart\r\n  So that" +
-                    " I can purchase the item", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "Add item to cart manually", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,9 +63,9 @@ namespace test_project_lab21
         public void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Add to Cart Functionality")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Add item to cart manually")))
             {
-                global::test_project_lab21.AddToCartFunctionalityFeature.FeatureSetup(null);
+                global::test_project_lab21.AddItemToCartManuallyFeature.FeatureSetup(null);
             }
         }
         
@@ -94,15 +92,14 @@ namespace test_project_lab21
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Successful addition of an item to the cart")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add to Cart Functionality")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
-        public void SuccessfulAdditionOfAnItemToTheCart()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User manually logs in and adds a product to the cart")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add item to cart manually")]
+        public void UserManuallyLogsInAndAddsAProductToTheCart()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful addition of an item to the cart", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User manually logs in and adds a product to the cart", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 2
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -112,17 +109,14 @@ namespace test_project_lab21
             else
             {
                 this.ScenarioStart();
-#line 9
-    testRunner.Given("the user is on the Sauce Demo login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 3
+    testRunner.Given("the user manually logs in to the Sauce Demo site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 10
-    testRunner.When("the user logs in with username \"standard_user\" and password \"secret_sauce\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 4
+    testRunner.When("the user adds the first item to the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 11
-    testRunner.And("the user adds the first item to the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
-    testRunner.Then("the shopping cart badge should show \"1\" item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 5
+    testRunner.Then("the shopping cart badge should show \"1\" item and open the cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
